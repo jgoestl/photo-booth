@@ -150,11 +150,11 @@
 			</div>
 
 			<div class="row">
-				<div class="cell">Photo series length</div>
+				<div class="cell">Photo from series to add to collage (0 = all)</div>
 				<div class="cell">
 					<div class="switch">
 						<label>
-							<input type="number" id="imagedAddToCollage">
+							<input type="number" id="photoAddToCollage">
 						</label>
 					</div>
 				</div>
@@ -292,7 +292,7 @@
 				$('#photoPreviewDuration').val(config.photoPreviewDuration);
 				$('#firstPhotoCountdownLength').val(config.firstPhotoCountdownLength);
 				$('#followingPhotosCountdownLength').val(config.followingPhotosCountdownLength);
-				$('#imagedAddToCollage').val(config.imagedAddToCollage);
+				$('#photoAddToCollage').val(config.photoAddToCollage);
 
 				$('#slideshowEnabled').prop('checked', config.slideshow.enabled);
 				$('#slideshowActivatesAfterSeconds').val(config.slideshow.activatesAfterSeconds);
@@ -315,7 +315,7 @@
 				config.photoPreviewDuration = $('#photoPreviewDuration').val();
 				config.firstPhotoCountdownLength = $('#firstPhotoCountdownLength').val();
 				config.followingPhotosCountdownLength = $('#followingPhotosCountdownLength').val();
-				config.imagedAddToCollage = $('#imagedAddToCollage').val();
+				config.photoAddToCollage = $('#photoAddToCollage').val();
 
 				config.slideshow.enabled = $('#slideshowEnabled').prop('checked');
 				config.slideshow.activatesAfterSeconds = $('#slideshowActivatesAfterSeconds').val();

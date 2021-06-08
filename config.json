@@ -14,7 +14,7 @@
 	"followingPhotosCountdownLength": "3",
 	"photoPreviewDuration": "8",
 	"photoSeriesLength": "3",
-	"imagedAddToCollage": 0,
+	"photoAddToCollage": 0,
 	"slideshow": {
 		"enabled": true,
 		"activatesAfterSeconds": "30",

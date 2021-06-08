@@ -100,7 +100,7 @@ const firstPhotoCountdownLength = utils.getConfig().firstPhotoCountdownLength ? 
 const followingPhotosCountdownLength = utils.getConfig().followingPhotosCountdownLength ? Number(utils.getConfig().followingPhotosCountdownLength) : 3;
 const photoPreviewDuration = utils.getConfig().photoPreviewDuration ? Number(utils.getConfig().photoPreviewDuration) : 8;
 const photoSeriesLength = utils.getConfig().photoSeriesLength ? Number(utils.getConfig().photoSeriesLength) : 3;
-const imagedAddToCollage = utils.getConfig().imagedAddToCollage ? Number(utils.getConfig().imagedAddToCollage) : 0;
+const photoAddToCollage = utils.getConfig().photoAddToCollage ? Number(utils.getConfig().photoAddToCollage) : 0;
 
 let executing = false;
 let seriesCounter = 0;
@@ -173,7 +173,7 @@ function trigger(callback) {
                 }
               });
 
-              if(imagedAddToCollage === 0 || seriesCounter === imagedAddToCollage-1) {
+              if(photoAddToCollage === 0 || seriesCounter === photoAddToCollage-1) {
                 setTimeout(function () {
                   utils.prependImage(message1);     // add image to collage
                 }, 1500);
