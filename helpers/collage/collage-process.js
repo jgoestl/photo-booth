@@ -13,8 +13,8 @@ const options = JSON.parse(optionsAsString);
 const images = argv.slice(5);
 
 // Create canvas (use dpi factor to make image larger - it will always be at 96 dpi)
-const canvasWidth = layout.spacing.left + (layout.width * layout.imageWidth) + ((layout.width - 1) * layout.spacing.betweenImages) + layout.spacing.right;
-const canvasHeight = layout.spacing.top + (layout.height * layout.imageHeight) + ((layout.height - 1) * layout.spacing.betweenImages) + layout.spacing.bottom;
+const canvasWidth = layout.spacing.left + (layout.width * layout.imageWidth) + ((layout.width - 1) * layout.spacing.betweenImages) + layout.spacing.right + 10;
+const canvasHeight = layout.spacing.top + (layout.height * layout.imageHeight) + ((layout.height - 1) * layout.spacing.betweenImages) + layout.spacing.bottom + 10;
 
 const dpiFactor = Math.ceil((layout.dpi || 96) / 96);
 const canvas = createCanvas(canvasWidth * dpiFactor, canvasHeight * dpiFactor)
