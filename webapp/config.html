@@ -51,7 +51,7 @@
 					<h3>Camera Setup</h3>
 				</div>
 			</div>
-			 
+
 			  <div class="row">
 			    <div class="cell">Image width</div>
 			    <div class="cell">
@@ -95,7 +95,7 @@
 					</div>
 
 			    </div>
-			</div>	
+			</div>
 			-->
 
 
@@ -204,6 +204,24 @@
 
 			<div class="row">
 				<div class="cell">
+					<h3>Printing</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="cell">Limit per User</div>
+				<div class="cell">
+					<div class="switch">
+						<label>
+							<input type="number" id="limitPerUser">
+						</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="cell">
 					<h3>Developer</h3>
 				</div>
 			</div>
@@ -298,6 +316,8 @@
 				$('#slideshowActivatesAfterSeconds').val(config.slideshow.activatesAfterSeconds);
 				$('#slideshowSecondsPerPhoto').val(config.slideshow.secondsPerPhoto);
 
+				$('#limitPerUser').val(config.printing.limitPerUser);
+
 				$('#showDevTools').prop('checked', config.init.showDevTools);
 				$('#useGPIO').prop('checked', config.init.useGPIO);
 				$('#fullscreen').prop('checked', config.init.fullscreen);
@@ -320,6 +340,8 @@
 				config.slideshow.enabled = $('#slideshowEnabled').prop('checked');
 				config.slideshow.activatesAfterSeconds = $('#slideshowActivatesAfterSeconds').val();
 				config.slideshow.secondsPerPhoto = $('#slideshowSecondsPerPhoto').val();
+
+				config.printing.limitPerUser = $('#limitPerUser').val();
 
 				config.init.showDevTools = $('#showDevTools').prop('checked');
 				config.init.useGPIO = $('#useGPIO').prop('checked');
@@ -349,7 +371,7 @@
 				return false;
 			}
 		}
-	
+
 	</script>
 </body>
 </html>
