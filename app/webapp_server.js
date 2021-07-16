@@ -116,6 +116,10 @@ io.on('connection', function(socket){
 		io.to(socket.id).emit('enable remote release');
 	}
 
+	if (utils.getConfig().webapp.enableGifDownload) {
+		io.to(socket.id).emit('enable gif download');
+	}
+
 	socket.on('disconnect', function() {
 	});
 

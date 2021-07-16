@@ -35,7 +35,8 @@
 		"maxDownloadImageSize": 800,
 		"gifDelay": 1000,
 		"enableRemoteRelease": true,
-		"contactAddressType": "email"
+		"contactAddressType": "email",
+		"enableGifDownload": true
 	},
 	"printing": {
 		"enabled": false,

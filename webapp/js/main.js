@@ -22,6 +22,8 @@ var socket = io();
 
 var useGrayscale = false;
 
+let enableGifDownload = false;
+
 $(document).ready(function() {
 
 	$('body').fadeIn(800);
@@ -140,6 +142,10 @@ socket.on('enable remote release', function() {
 	$('.my-brand').addClass('hidden-xs');
 });
 
+socket.on('enable gif download', function() {
+	enableGifDownload = true;
+});
+
 socket.on('new photos', function(imgUrlArray) {
 	for (i = 0; i < imgUrlArray.length; i++) {
 		var url = imgUrlArray[i];
@@ -193,7 +199,9 @@ $(document).on("click", 'a.img-download', function(event) {
 			imageContainer.removeClass('selected');
 		}
 
-		$('.my-gif-button i').toggleClass('hide', selectedImages.length < 2);
+		if(enableGifDownload === true) {
+			$('.my-gif-button i').toggleClass('hide', selectedImages.length < 2);
+		}
 	});
 
 	$('.my-gif-button').click(function() {
