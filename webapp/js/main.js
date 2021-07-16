@@ -199,7 +199,7 @@ $(document).on("click", 'a.img-download', function(event) {
 			imageContainer.removeClass('selected');
 		}
 
-		if(enableGifDownload === true) {
+		if(enableGifDownload === true || getCookie('password')) {
 			$('.my-gif-button i').toggleClass('hide', selectedImages.length < 2);
 		}
 	});

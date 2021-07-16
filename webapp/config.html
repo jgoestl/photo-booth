@@ -337,7 +337,7 @@
 
 				$('#limitPerUser').val(config.printing.limitPerUser);
 
-				$('#enableGifDownload').val(config.webapp.enableGifDownload);
+				$('#enableGifDownload').prop('checked', config.webapp.enableGifDownload);
 
 				$('#showDevTools').prop('checked', config.init.showDevTools);
 				$('#useGPIO').prop('checked', config.init.useGPIO);
@@ -364,7 +364,7 @@
 
 				config.printing.limitPerUser = $('#limitPerUser').val();
 
-				config.webapp.enableGifDownload = $('#enableGifDownload').val();
+				config.webapp.enableGifDownload = $('#enableGifDownload').prop('checked');
 
 				config.init.showDevTools = $('#showDevTools').prop('checked');
 				config.init.useGPIO = $('#useGPIO').prop('checked');
